@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Próximamente | Piel y Cuerdas</title>
+
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --text: #f5f5f7;
+      --muted: #9a9aa0;
+      --accent: #c084fc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(1200px 600px at 50% 20%, #1a1a22, var(--bg));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 2rem auto;
+      border-radius: 999px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #7a7a85;
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Próximamente</h1>
+    <div class="divider"></div>
+    <p>
+      Estamos afinando los últimos detalles.<br />
+      <strong>Piel y Cuerdas</strong> estará disponible muy pronto.
+    </p>
+
+    <footer>
+      © <span>2025</span> Piel y Cuerdas
+    </footer>
+  </main>
+</body>
+</html>
