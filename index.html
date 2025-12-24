@@ -6,58 +6,55 @@
 
   <title>Clases de Shibari en Quito | Formación Educativa</title>
 
-  <meta name="description" content="Clases presenciales de Shibari en Quito, Ecuador. Formación educativa en atadura erótica japonesa con enfoque en técnica, consentimiento y seguridad." />
+  <meta name="description" content="Clases presenciales de Shibari en Quito, Ecuador. Formación educativa en atadura japonesa con enfoque en técnica, consentimiento y seguridad." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://pielycuerdas.com/" />
 
   <style>
     :root {
-      --bg: #0f0f12;
-      --card: #16161d;
-      --text: #f5f5f7;
-      --muted: #9a9aa0;
-      --accent: #c084fc;
-      --border: #262630;
+      --bg: #1a1714;           /* madera oscura */
+      --card: #221e1a;         /* madera interior */
+      --text: #f4f1ec;         /* papel claro */
+      --muted: #b6aea5;        /* papel envejecido */
+      --accent: #9b1c1c;       /* rojo japonés */
+      --border: #2f2a25;       /* veta */
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Georgia", "Times New Roman", serif;
     }
 
     body {
-      background: var(--bg);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45)),
+        var(--bg);
       color: var(--text);
-      line-height: 1.65;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      line-height: 1.7;
     }
 
     header {
-      padding: 2rem 1.5rem 1rem;
+      padding: 2.5rem 1.5rem 1.5rem;
       text-align: center;
     }
 
     header img {
-      max-width: 180px;
-      margin: 0 auto 1.5rem;
+      max-width: 160px;
+      margin: 0 auto 1.25rem;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 6vw, 2.6rem);
-      letter-spacing: -0.02em;
+      font-size: clamp(1.9rem, 6vw, 2.6rem);
+      letter-spacing: 0.02em;
       margin-bottom: 1rem;
     }
 
     .intro {
       color: var(--muted);
       font-size: 1.05rem;
-      max-width: 36ch;
+      max-width: 38ch;
       margin: auto;
     }
 
@@ -68,19 +65,32 @@
     }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.75rem;
     }
 
     .card {
-      background: var(--card);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15)),
+        var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
+      border-radius: 14px;
+      padding: 1.6rem;
     }
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
     p, li {
@@ -90,7 +100,7 @@
 
     ul {
       padding-left: 1.2rem;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
     }
 
     li {
@@ -98,34 +108,21 @@
     }
 
     .notice {
-      border-left: 4px solid var(--accent);
-      background: rgba(192,132,252,0.06);
-      padding: 1.25rem;
-      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+      background: rgba(155,28,28,0.08);
+      padding: 1.25rem 1.5rem;
+      border-radius: 6px;
       font-size: 0.9rem;
-    }
-
-    .cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: var(--accent);
-      color: #0f0f12;
-      padding: 1rem;
-      border-radius: 999px;
-      font-weight: 600;
-      margin-top: 1rem;
-      text-decoration: none;
+      color: #e5ded6;
     }
 
     footer {
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       font-size: 0.85rem;
-      color: #7a7a85;
+      color: #9f968c;
     }
 
-    /* Desktop enhancement */
     @media (min-width: 768px) {
       main {
         max-width: 720px;
@@ -140,7 +137,7 @@
   <img src="logo.jpg" alt="Piel y Cuerdas" />
   <h1>Clases de Shibari en Quito</h1>
   <p class="intro">
-    Formación educativa en bondage japonés con enfoque en técnica,
+    Formación educativa en atadura japonesa con enfoque en técnica,
     consentimiento y seguridad.
   </p>
 </header>
@@ -150,8 +147,8 @@
   <section class="card">
     <h2>Enfoque educativo</h2>
     <p>
-      Enseñamos Shibari desde una base técnica basada en el auto-control del Dominante,
-      priorizando el consentimiento informado y el cuidado corporal.
+      Enseñamos Shibari desde una base técnica basada en el autocontrol,
+      priorizando el consentimiento informado, la seguridad y el cuidado corporal.
     </p>
   </section>
 
