@@ -13,7 +13,7 @@
   <style>
     :root {
       --bg: #0f0f12;
-      --surface: #16161d;
+      --card: #16161d;
       --text: #f5f5f7;
       --muted: #9a9aa0;
       --accent: #c084fc;
@@ -30,107 +30,106 @@
     body {
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     header {
-      border-bottom: 1px solid var(--border);
-      background: rgba(15,15,18,0.85);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav img {
-      height: 42px;
-    }
-
-    .nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .hero {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 0 1.5rem;
+      padding: 2rem 1.5rem 1rem;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
+    header img {
+      max-width: 180px;
+      margin: 0 auto 1.5rem;
     }
 
-    .hero p {
+    h1 {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
       color: var(--muted);
-      max-width: 650px;
+      font-size: 1.05rem;
+      max-width: 36ch;
       margin: auto;
-      font-size: 1.1rem;
+    }
+
+    main {
+      padding: 2rem 1.5rem;
+      max-width: 520px;
+      margin: auto;
     }
 
     section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      margin-bottom: 2.5rem;
     }
 
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
     }
 
-    section p,
-    section li {
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p, li {
       color: var(--muted);
       font-size: 1rem;
     }
 
     ul {
-      margin-top: 1rem;
       padding-left: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     li {
       margin-bottom: 0.6rem;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-    }
-
     .notice {
       border-left: 4px solid var(--accent);
-      background: rgba(192,132,252,0.05);
-      padding: 1.5rem;
-      font-size: 0.95rem;
+      background: rgba(192,132,252,0.06);
+      padding: 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--accent);
+      color: #0f0f12;
+      padding: 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-top: 1rem;
+      text-decoration: none;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      margin-top: 5rem;
       padding: 2rem 1.5rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #7a7a85;
+    }
+
+    /* Desktop enhancement */
+    @media (min-width: 768px) {
+      main {
+        max-width: 720px;
+      }
     }
   </style>
 </head>
@@ -138,57 +137,46 @@
 <body>
 
 <header>
-  <nav class="nav">
-    <img src="logo.jpg" alt="Piel y Cuerdas" />
-    <ul>
-      <li><a href="#">Clases</a></li>
-      <li><a href="#">Enfoque</a></li>
-      <li><a href="#">Comunidad</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+  <img src="logo.jpg" alt="Piel y Cuerdas" />
+  <h1>Clases de Shibari en Quito</h1>
+  <p class="intro">
+    Formación educativa en bondage japonés con enfoque en técnica,
+    consentimiento y seguridad.
+  </p>
 </header>
 
 <main>
 
-  <section class="hero">
-    <h1>Clases Presenciales de Shibari en Quito</h1>
-    <p>
-      Formación educativa en bondage japonés con énfasis en técnica, consentimiento y seguridad.
-      Un espacio responsable para aprender y profundizar en la práctica del Shibari.
-    </p>
-  </section>
-
   <section class="card">
     <h2>Enfoque educativo</h2>
     <p>
-      Nuestras clases están diseñadas para personas que desean aprender Shibari desde una base sólida,
-      entendiendo tanto la técnica como los principios éticos y de cuidado corporal que la práctica requiere.
+      Enseñamos Shibari desde una base técnica y responsable,
+      priorizando el consentimiento informado y el cuidado corporal.
     </p>
   </section>
 
   <section>
-    <h2>Contenidos de las clases</h2>
+    <h2>¿Qué se aprende?</h2>
     <ul>
       <li>Fundamentos técnicos del Shibari</li>
       <li>Seguridad y prevención de riesgos</li>
-      <li>Consentimiento informado y comunicación</li>
+      <li>Comunicación y consentimiento</li>
       <li>Anatomía básica aplicada</li>
       <li>Nudos y estructuras iniciales</li>
-      <li>Cuidado posterior (aftercare)</li>
+      <li>Aftercare</li>
     </ul>
   </section>
 
   <section class="card">
     <h2>Modalidad</h2>
     <p>
-      Clases presenciales en Quito, Ecuador.  
+      Clases presenciales en Quito, Ecuador.<br>
       Actividad dirigida exclusivamente a personas mayores de 18 años.
     </p>
   </section>
 
   <section class="notice">
-    Este proyecto tiene un enfoque educativo y artístico.
+    Este espacio tiene un enfoque educativo y artístico.
     No se ofrece contenido sexual explícito ni pornográfico.
   </section>
 
