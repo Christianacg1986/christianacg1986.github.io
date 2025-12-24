@@ -1,0 +1,105 @@
+<section class="card">
+  <h2>Contacto y acceso</h2>
+  <p class="muted">
+    Antes de escribir, es necesario confirmar que tu interés se ajusta
+    al marco formativo de este espacio.
+  </p>
+
+  <form id="filtroForm">
+
+    <label>
+      ¿Tienes experiencia previa en prácticas de atadura?
+      <select required>
+        <option value="">Selecciona</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+    </label>
+
+    <label>
+      ¿Desde qué enfoque te interesa formarte?
+      <select id="enfoque" required>
+        <option value="">Selecciona</option>
+        <option value="tecnico">Técnico</option>
+        <option value="historico">Histórico</option>
+        <option value="disciplinar">Disciplinar</option>
+      </select>
+    </label>
+
+    <label>
+      ¿Estás dispuesto/a a participar en clases grupales?
+      <select id="grupal" required>
+        <option value="">Selecciona</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" id="codigo" />
+      Acepto un código de conducta y límites estrictos
+    </label>
+
+    <button type="submit" class="cta">
+      Continuar
+    </button>
+
+    <p id="error" class="error"></p>
+  </form>
+</section>
+
+<style>
+  .muted { color:#9a9aa0; font-size:.95rem; margin-bottom:1rem; }
+  label { display:block; margin-bottom:1.2rem; font-size:.95rem; }
+  select {
+    width:100%;
+    margin-top:.4rem;
+    padding:.7rem;
+    border-radius:10px;
+    border:1px solid #2a2a2a;
+    background:#161616;
+    color:#f5f5f7;
+  }
+  .check { display:flex; gap:.6rem; align-items:flex-start; }
+  .cta {
+    width:100%;
+    margin-top:1rem;
+    padding:1rem;
+    border-radius:999px;
+    background:#8b1e1e;
+    color:#fff;
+    font-weight:600;
+    border:none;
+  }
+  .error {
+    margin-top:1rem;
+    color:#c75c5c;
+    font-size:.9rem;
+  }
+</style>
+
+<script>
+  document.getElementById("filtroForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const enfoque = document.getElementById("enfoque").value;
+    const grupal = document.getElementById("grupal").value;
+    const codigo = document.getElementById("codigo").checked;
+    const error = document.getElementById("error");
+
+    // Condiciones mínimas de acceso
+    if (!codigo || grupal !== "Sí" || enfoque === "") {
+      error.textContent =
+        "Este espacio está dirigido exclusivamente a procesos formativos con marco y límites claros.";
+      return;
+    }
+
+    // WhatsApp (reemplaza el número)
+    const phone = "593XXXXXXXXX";
+    const text = encodeURIComponent(
+      "Hola, he revisado el marco formativo de Piel y Cuerdas y me interesa recibir información sobre las clases."
+    );
+
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+  });
+</script>
