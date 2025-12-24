@@ -194,28 +194,41 @@
     </section>
   </main>
 
-  <script>
-    document.getElementById("filtroForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+<script>
+  document.getElementById("filtroForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      const enfoque = document.getElementById("enfoque").value;
-      const grupal = document.getElementById("grupal").value;
-      const codigo = document.getElementById("codigo").checked;
-      const error = document.getElementById("error");
+    const experiencia = document.querySelector(
+      'label select:not([id])'
+    ).value;
 
-      if (!codigo || grupal !== "Sí" || enfoque === "") {
-        error.textContent =
-          "Este espacio está dirigido exclusivamente a procesos formativos con marco y límites claros.";
-        return;
-      }
+    const enfoque = document.getElementById("enfoque").value;
+    const modalidad = document.getElementById("grupal").value;
+    const codigo = document.getElementById("codigo").checked;
+    const error = document.getElementById("error");
 
-      const phone = "593979263235"; // ← CAMBIA ESTO
-      const text = encodeURIComponent(
-        "Hola, he revisado el marco formativo de Piel y Cuerdas y me interesa recibir información sobre las clases."
-      );
+    if (!codigo || !experiencia || !enfoque || !modalidad) {
+      error.textContent =
+        "Este espacio está dirigido exclusivamente a procesos formativos con marco y límites claros.";
+      return;
+    }
 
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-    });
-  </script>
+    const mensaje = `
+Hola, he revisado el marco formativo de *Piel y Cuerdas* y me interesa recibir información.
+
+• Experiencia previa: ${experiencia}
+• Enfoque: ${enfoque}
+• Modalidad: ${modalidad}
+
+Quedo atento/a. Gracias.
+    `.trim();
+
+    const phone = "593979263235"; // ← CAMBIA ESTO SI ES NECESARIO
+    const text = encodeURIComponent(mensaje);
+
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+  });
+</script>
+
 </body>
 </html>
