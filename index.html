@@ -4,30 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
   <title>Clases de Shibari en Quito | Formación Educativa</title>
-<p></p> 
   <meta name="description" content="Clases presenciales de Shibari en Quito, Ecuador. Formación educativa en atadura japonesa con enfoque en técnica, consentimiento y seguridad." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://pielycuerdas.com/" />
 
   <style>
-
-.logo {
-  display: block;            /* clave */
-  width: min(300px, 70vw);
-  height: min(300px, 70vw);
-  object-fit: contain;
-  margin: 0 auto 5px;     /* centra horizontalmente */
-}
-
     :root {
-      --bg: #1a1714;           /* madera oscura */
-      --card: #221e1a;         /* madera interior */
-      --text: #f4f1ec;         /* papel claro */
-      --muted: #b6aea5;        /* papel envejecido */
-      --accent: #9b1c1c;       /* rojo japonés */
-      --border: #2f2a25;       /* veta */
+      --bg: #1a1714;
+      --card: #221e1a;
+      --text: #f4f1ec;
+      --muted: #b6aea5;
+      --accent: #9b1c1c;
+      --border: #2f2a25;
     }
 
     * {
@@ -45,31 +34,23 @@
       line-height: 1.7;
     }
 
+    /* HEADER */
     header {
-      padding: 2.5rem 1.5rem 1.5rem;
+      padding: 1.5rem 1.5rem 0.5rem;
       text-align: center;
     }
 
-    header img {
-      max-width: 350px;
-      margin: 0 auto 12px;
+    .logo {
+      display: block;
+      width: min(300px, 70vw);
+      height: min(300px, 70vw);
+      object-fit: contain;
+      margin: 0 auto; /* sin espacio abajo */
     }
 
-    h1 {
-      font-size: clamp(1.9rem, 6vw, 2.6rem);
-      letter-spacing: 0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .intro {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 38ch;
-      margin: auto;
-    }
-
+    /* MAIN */
     main {
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1.5rem 2rem;
       max-width: 520px;
       margin: auto;
     }
@@ -117,6 +98,18 @@
       margin-bottom: 0.6rem;
     }
 
+    /* LINKS */
+    a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* NOTICE */
     .notice {
       border-left: 3px solid var(--accent);
       background: rgba(155,28,28,0.08);
@@ -124,8 +117,10 @@
       border-radius: 6px;
       font-size: 0.9rem;
       color: #e5ded6;
+      margin-bottom: 2rem;
     }
 
+    /* FOOTER */
     footer {
       padding: 2.5rem 1.5rem;
       text-align: center;
@@ -144,10 +139,7 @@
 <body>
 
 <header>
-  
-  <h1>
-  <img src="inicio.png" alt="Piel y Cuerdas" /></h1>
-
+  <img src="inicio.png" alt="Piel y Cuerdas" class="logo">
 </header>
 
 <main>
@@ -163,22 +155,11 @@
   <section>
     <h2>¿Qué se aprende?</h2>
     <ul>
-      <li>
-  <a href="definicion.html">¿Qué es el Shibari?</a>
-</li>
-
-      <li>  <a href="larazon.html">¿Por qué atar?</a></li>
-      
-    <li>
-  <a href="aibuvsseme.html">¿Aibunawa o Semenawa?</a>
-</li>
-       <li>
-  <a href="shibaribdsm.html">¿Shibari es BDSM?</a>
-</li>
-       <li>
-  <a href="ssc.html">¿Que Protocolo de Seguridad se Usa?</a>
-</li>
-  
+      <li><a href="definicion.html">¿Qué es el Shibari?</a></li>
+      <li><a href="larazon.html">¿Por qué atar?</a></li>
+      <li><a href="aibuvsseme.html">¿Aibunawa o Semenawa?</a></li>
+      <li><a href="shibaribdsm.html">¿Shibari es BDSM?</a></li>
+      <li><a href="ssc.html">¿Qué protocolo de seguridad se usa?</a></li>
     </ul>
   </section>
 
@@ -194,7 +175,9 @@
     Este espacio tiene un enfoque educativo y artístico.
     No se ofrece contenido sexual explícito ni pornográfico.
   </section>
- <a href="contacto.html"> Contáctanos </a>
+
+  <a href="contacto.html">Contáctanos</a>
+
 </main>
 
 <footer>
