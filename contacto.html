@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talleres de Shibari | Piel y Cuerdas</title>
+<title>Talleres de Shibari para Parejas | Piel y Cuerdas</title>
 
 <style>
 body{
@@ -11,12 +11,12 @@ body{
     font-family: Arial, sans-serif;
     background-color:#0f0f0f;
     color:#ffffff;
-    line-height:1.6;
+    line-height:1.5;
 }
 
 header{
     background:url('contact.png') center/cover no-repeat;
-    height:70vh;
+    height:60vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -24,35 +24,26 @@ header{
 }
 
 header h1{
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.65);
     padding:20px;
-    font-size:32px;
-    letter-spacing:2px;
+    font-size:28px;
+    letter-spacing:1px;
 }
 
 section{
-    padding:60px 20px;
-    max-width:900px;
+    padding:30px 20px;
+    max-width:850px;
     margin:auto;
 }
 
 h2{
     color:#c89b3c;
+    margin-bottom:10px;
 }
 
-.button{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 30px;
-    background:#c89b3c;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:5px;
-}
-
-.button:hover{
-    background:#e0b654;
+ul{
+    padding-left:18px;
+    margin-top:10px;
 }
 
 .highlight{
@@ -60,62 +51,98 @@ h2{
     font-weight:bold;
 }
 
-footer{
+.button{
+    display:block;
+    margin-top:15px;
+    padding:15px;
+    background:#c89b3c;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
     text-align:center;
-    padding:30px;
-    background:#111;
-    font-size:14px;
 }
+
+.button:disabled{
+    background:#555;
+    color:#aaa;
+}
+
+.notice{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.center{
+    text-align:center;
+}
+
 </style>
+
+<script>
+function toggleButton() {
+    const checkbox = document.getElementById("confirmCheck");
+    const reserveBtn = document.getElementById("reserveBtn");
+    reserveBtn.style.pointerEvents = checkbox.checked ? "auto" : "none";
+    reserveBtn.style.opacity = checkbox.checked ? "1" : "0.5";
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Descubre el Arte del Shibari<br>Conexión. Técnica. Presencia.</h1>
+    <h1>Shibari para Parejas<br>Conexión · Técnica · Presencia</h1>
 </header>
 
 <section>
-    <h2>¿Qué es Piel y Cuerdas?</h2>
+    <h2>Exclusivo para Parejas</h2>
     <p>
-        Un espacio íntimo y seguro donde aprenderás el arte japonés del Shibari 
-        desde la técnica correcta, la comunicación consciente y el respeto mutuo.
+        Este taller está diseñado <span class="highlight">únicamente para parejas</span> 
+        que desean explorar el arte del Shibari desde la confianza y la comunicación consciente.
     </p>
     <p>
-        No es solo atar. Es crear conexión.
+        No es un espectáculo. No es improvisación.  
+        Es un <span class="highlight">servicio educativo con normas estrictas</span>.
     </p>
 </section>
 
 <section>
-    <h2>¿Qué aprenderás?</h2>
+    <h2>¿Qué aprenderán?</h2>
     <ul>
         <li>✔ Nudos fundamentales y estructuras seguras</li>
         <li>✔ Anatomía aplicada y prevención de riesgos</li>
         <li>✔ Comunicación y consentimiento</li>
-        <li>✔ Fluidez estética y manejo de cuerdas</li>
+        <li>✔ Fluidez y estética en pareja</li>
     </ul>
 </section>
 
 <section>
-    <h2>¿Para quién es este taller?</h2>
+    <h2>Importante</h2>
     <p>
-        Para personas y parejas con <span class="highlight">curiosidad consciente</span> 
-        que desean explorar desde el respeto y la técnica.
-    </p>
-    <p>
-        No necesitas experiencia previa.
+        Trabajamos con cupos limitados para garantizar acompañamiento personalizado.
+        Este espacio es confidencial y requiere madurez y respeto mutuo.
     </p>
 </section>
 
-<section style="text-align:center;">
-    <h2>Reserva tu cupo</h2>
-    <p>Cupos limitados para garantizar acompañamiento personalizado.</p>
-    <a href="https://wa.me/TUNUMERO" class="button">Quiero más información</a>
-</section>
+<section class="center">
+    <p class="notice">
+        Debes confirmar que comprendes la naturaleza educativa y las normas del servicio.
+    </p>
 
-<footer>
-    Piel y Cuerdas © 2026 | Espacio confidencial y seguro
-</footer>
+    <label>
+        <input type="checkbox" id="confirmCheck" onclick="toggleButton()">
+        Comprendo que me estoy comunicando con un servicio EDUCATIVO con Normas Estrictas
+    </label>
+
+    <a href="https://wa.me/593979263235?text=Hola,%20quiero%20reservar%20cupo%20para%20el%20taller%20de%20Shibari%20para%20parejas."
+       id="reserveBtn"
+       class="button"
+       style="pointer-events:none; opacity:0.5;">
+       Reservar Cupo
+    </a>
+</section>
 
 </body>
 </html>
