@@ -6,6 +6,36 @@
 <title>Talleres de Shibari para Parejas | Piel y Cuerdas</title>
 
 <style>
+
+    .whatsapp-btn{
+    display:block;
+    margin-top:20px;
+    padding:16px;
+    background:#25D366;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    text-align:center;
+    font-size:16px;
+    transition:all 0.3s ease;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+.whatsapp-btn img{
+    vertical-align:middle;
+    width:22px;
+    margin-right:8px;
+}
+
+.whatsapp-disabled{
+    pointer-events:none;
+    opacity:0.5;
+}
+    
 body{
     margin:0;
     font-family: Arial, sans-serif;
@@ -104,8 +134,12 @@ ul{
 function toggleButton() {
     const checkbox = document.getElementById("confirmCheck");
     const reserveBtn = document.getElementById("reserveBtn");
-    reserveBtn.style.pointerEvents = checkbox.checked ? "auto" : "none";
-    reserveBtn.style.opacity = checkbox.checked ? "1" : "0.5";
+
+    if (checkbox.checked) {
+        reserveBtn.classList.remove("whatsapp-disabled");
+    } else {
+        reserveBtn.classList.add("whatsapp-disabled");
+    }
 }
 </script>
 
@@ -208,12 +242,14 @@ Sí. Trabajamos con grupos reducidos para garantizar acompañamiento personaliza
         Comprendo que me estoy comunicando con un servicio EDUCATIVO con Normas Estrictas
     </label>
 
-    <a href="https://wa.me/593979263235?text=Hola,%20quiero%20reservar%20cupo%20para%20el%20taller%20de%20Shibari%20para%20parejas."
-       id="reserveBtn"
-       class="button"
-       style="pointer-events:none; opacity:0.5;">
-       Reservar Cupo
-    </a>
+ <a href="https://wa.me/593979263235?text=Hola,%20quiero%20reservar%20cupo%20para%20el%20taller%20de%20Shibari%20para%20parejas."
+   id="reserveBtn"
+   class="whatsapp-btn whatsapp-disabled">
+
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+   Reservar Cupo
+
+</a>
 </section>
 
 </body>
