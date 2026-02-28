@@ -20,7 +20,30 @@
     font-size:16px;
     transition:all 0.3s ease;
 }
+@keyframes latido90 {
+  0%   { transform: scale(1); }
+  
+  /* Negra (golpe fuerte) */
+  10%  { transform: scale(1.08); }
+  25%  { transform: scale(1); }
 
+  /* Corchea */
+  37%  { transform: scale(1.05); }
+  50%  { transform: scale(1); }
+
+  /* Corchea */
+  62%  { transform: scale(1.05); }
+  75%  { transform: scale(1); }
+
+  /* Blanca (sostén largo) */
+  100% { transform: scale(1); }
+}
+
+.latido {
+  display: inline-block;
+  animation: latido90 2.666s infinite ease-in-out;
+  transform-origin: center;
+}
 .whatsapp-btn:hover{
     background:#1ebe5d;
 }
@@ -242,7 +265,9 @@ Sí. Trabajamos con grupos reducidos para garantizar acompañamiento personaliza
     <section>
     <p class="notice">
 <center>
-  <img src="confirma.png" alt="Confirma para Continuar" width=100%>
+  <div class="latido">
+    <img src="confirma.png" alt="Confirma para Continuar" width="100%">
+  </div>
 </center>
     </p>
 
