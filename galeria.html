@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galería | Piel y Cuerdas</title>
+<meta name="description" content="Galería de talleres y prácticas de Shibari en Quito realizados dentro del programa educativo de Piel y Cuerdas.">
+
+<style>
+
+:root{
+--bg:#1a1714;
+--card:#221e1a;
+--text:#f4f1ec;
+--muted:#b6aea5;
+--accent:#9b1c1c;
+--border:#2f2a25;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Georgia,"Times New Roman",serif;
+}
+
+body{
+background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.45)),var(--bg);
+color:var(--text);
+line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:2rem 1rem 1rem;
+}
+
+.logo{
+width:min(300px,70vw);
+margin:auto;
+display:block;
+}
+
+.nav{
+margin-top:1.2rem;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:1.2rem;
+font-size:.9rem;
+}
+
+.nav a{
+color:var(--muted);
+text-decoration:none;
+}
+
+.nav a:hover{
+color:var(--accent);
+}
+
+/* MAIN */
+
+main{
+max-width:900px;
+margin:auto;
+padding:2rem 1.5rem;
+}
+
+/* TITULO */
+
+h1{
+font-size:1.6rem;
+margin-bottom:1rem;
+text-align:center;
+}
+
+p{
+text-align:justify;
+color:var(--muted);
+margin-bottom:2rem;
+}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:1.2rem;
+}
+
+.gallery img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:10px;
+border:1px solid var(--border);
+transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+font-size:.85rem;
+color:#9f968c;
+padding:2rem 1rem;
+border-top:1px solid var(--border);
+margin-top:3rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<video class="logo" autoplay loop muted playsinline>
+<source src="HeaderFlag.webm" type="video/webm">
+</video>
+
+<nav class="nav">
+<a href="index.html">Inicio</a>
+<a href="index.html#defi">¿Qué es el Shibari?</a>
+<a href="index.html#quienes">Quiénes somos</a>
+<a href="index.html#programa">Programa</a>
+<a href="contacto.html">Reservar Clase</a>
+</nav>
+
+</header>
+
+<main>
+
+<h1>Galería</h1>
+
+<p>
+Registro de prácticas y talleres de Shibari realizados en Quito dentro del
+programa educativo de Piel y Cuerdas. Las imágenes muestran ejercicios de
+estructura de cuerda, práctica técnica y dinámicas de aprendizaje en un
+entorno controlado.
+</p>
+
+<div class="gallery">
+
+<img src="ws1.jpg" alt="Práctica de Shibari en taller">
+<img src="ws2.jpg" alt="Ejercicio de estructura de cuerda">
+<img src="ws3.jpg" alt="Taller de Shibari en Quito">
+
+</div>
+
+</main>
+
+<footer>
+
+© 2025 Piel y Cuerdas  
+<br>
+Educación en Shibari · Quito, Ecuador
+
+</footer>
+
+</body>
+</html>
