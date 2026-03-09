@@ -82,24 +82,32 @@ letter-spacing:.08em;
 
 /* NAVEGACIÓN */
 
-.nav{
-margin-top:1.2rem;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:1.5rem;
-font-size:.9rem;
-}
-
 .nav a{
-color:var(--muted);
+color:var(--text);
 text-decoration:none;
+padding:6px 10px;
+border-radius:6px;
+border:1px solid transparent;
+transition:all .2s ease;
 }
 
 .nav a:hover{
-color:var(--accent);
+color:white;
+background:var(--accent);
+border-color:var(--accent);
+}
+@media (max-width:600px){
+
+.nav{
+gap:10px;
 }
 
+.nav a{
+border:1px solid var(--border);
+background:rgba(255,255,255,0.04);
+}
+
+}
 /* LAYOUT */
 
 main{
