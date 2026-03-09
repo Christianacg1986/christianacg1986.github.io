@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Prueba video transparente</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* fondo para comprobar la transparencia */
+    background: linear-gradient(45deg,#000,#555);
+}
+
+video{
+    width:400px;
+}
+</style>
+
+</head>
+
+<body>
+
+<video autoplay loop muted playsinline>
+    <source src="flag.webm" type="video/webm">
+</video>
+
+</body>
+</html>
