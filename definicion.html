@@ -51,7 +51,6 @@
       overflow: hidden;
     }
 
-    /* Sello / kamon abstracto */
     .card::before {
       content: "";
       position: absolute;
@@ -86,11 +85,23 @@
       color: var(--muted);
       font-size: 1rem;
       margin-bottom: 1.1rem;
+      /* JUSTIFICADO DE TEXTO */
+      text-align: justify;
+      hyphens: auto; /* Opcional: ayuda a que el justificado se vea mejor en móviles partiendo palabras */
     }
 
     p strong {
       color: var(--text);
       font-weight: 600;
+    }
+
+    /* ADAPTACIÓN DE IMÁGENES */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem auto; /* Centralas y dales espacio vertical */
+      border-radius: 8px; /* Opcional: para suavizar las esquinas de las fotos */
     }
 
     @media (min-width: 768px) {
@@ -111,33 +122,25 @@
   <section class="card">
     <h2>¿Qué es el Shibari?<br> Origen y marco de la atadura japonesa</h2>
 
-<br><br><img
-  src="atandola.png"
-  style="display:block; margin: 0 auto;"
-  alt="Ito Yoshitoshi"
-><br><br
+    <img src="atandola.png" alt="Atadura de Shibari">
+
     <p>
       El <strong>Shibari</strong> es una práctica de inmovilización corporal por medio de cuerdas de fibra natural 
-    para fines de control y Dominación dentro de un contexto Sado-Masoquista. Se desarrolló a partir de la disciplina de 
-    atadura militar Samurái conocido como <strong>Hojojutsu.</strong>
+      para fines de control y Dominación dentro de un contexto Sado-Masoquista. Se desarrolló a partir de la disciplina de 
+      atadura militar Samurái conocido como <strong>Hojojutsu.</strong>
     </p>
-<br><br><img
-  src="cuadro.png"
-  style="display:block; margin: 0 auto;"
-  alt="Ito Yoshitoshi"
->
-    <br>
-  <p>
+
+    <img src="cuadro.png" alt="Obra de arte Shibari">
+
+    <p>
       Parte del desarrollo moderno del Shibari está influenciado por el trabajo de
       <strong>Seiu Itō</strong>, artista japonés que documentó y exploró la atadura como
       una expresión de poder, tensión y confrontación corporal, alejándola de una lectura
       meramente decorativa o romántica.
     </p>
-<br><img
-  src="seiu.png"
-  style="display:block; margin: 0 auto;"
-  alt="Ito Yoshitoshi"
-><br><br>
+
+    <img src="seiu.png" alt="Seiu Itō">
+
     <p>
       En <strong>Piel y Cuerdas</strong> abordamos el Shibari desde una línea que prioriza
       la <strong>intención</strong>, la <strong>tensión</strong> y el
