@@ -105,22 +105,23 @@ border:1px solid transparent;
 transition:all .2s ease;
 }
 
-.nav a:hover{
-color:white;
-background:var(--accent);
-border-color:var(--accent);
-}
-@media (max-width:600px){
+.nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los links bajen a la siguiente línea si no caben */
+    justify-content: center;
+    gap: 12px; /* Espacio real entre los botones */
+    padding: 10px 0;
+  }
 
-.nav{
-gap:10px;
-}
-
-.nav a{
-border:1px solid var(--border);
-background:rgba(255,255,255,0.04);
-}
-
+  .nav a {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px 16px; /* Aumentamos el área de clic */
+    font-size: 0.85rem;
+    flex: 1 1 calc(45% - 10px); /* Hace que los botones ocupen casi la mitad del ancho */
+    text-align: center;
+    min-width: 140px; /* Evita que se vuelvan muy flacos */
+  }
 }
 /* LAYOUT */
 
