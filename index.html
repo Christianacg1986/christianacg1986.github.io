@@ -15,7 +15,36 @@
 --bg:#1a1714;
 --text:#f4f1ec;
 }
+.footer{
+margin-top:50px;
+text-align:center;
+font-size:0.85rem;
+color:#b6aea5;
+display:flex;
+flex-direction:column;
+gap:6px;
+}
 
+.insta-link{
+margin-top:10px;
+display:inline-flex;
+align-items:center;
+gap:8px;
+color:#b6aea5;
+text-decoration:none;
+transition:color .2s ease, transform .2s ease;
+}
+
+.insta-link:hover{
+color:#9b1c1c;
+transform:scale(1.05);
+}
+
+.insta-icon{
+width:18px;
+height:18px;
+fill:currentColor;
+}
 *{
 margin:0;
 padding:0;
@@ -109,4 +138,33 @@ opacity:.9;
 </nav>
 
 </body>
+
+  <footer class="footer">
+
+  <p>© 2025 Piel y Cuerdas</p>
+  <p>Quito · Ecuador · Formación presencial</p>
+
+  <a href="https://instagram.com/pielycuerdas" target="_blank" class="insta-link">
+    
+    <svg viewBox="0 0 24 24" class="insta-icon">
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 
+      2.76 2.24 5 5 5h10c2.76 0 5-2.24 
+      5-5V7c0-2.76-2.24-5-5-5H7zm0 
+      2h10c1.65 0 3 1.35 3 3v10c0 
+      1.65-1.35 3-3 3H7c-1.65 
+      0-3-1.35-3-3V7c0-1.65 
+      1.35-3 3-3zm11 1.5a1.5 
+      1.5 0 100 3 1.5 1.5 0 
+      000-3zM12 7a5 5 0 
+      100 10 5 5 0 
+      000-10zm0 2a3 3 0 
+      110 6 3 3 0 
+      010-6z"/>
+    </svg>
+
+    @pielycuerdas
+
+  </a>
+
+</footer>
 </html>
