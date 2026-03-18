@@ -2,295 +2,82 @@
 <html lang="es">
 <head>
 
-    
-    <link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Piel y Cuerdas | Shibari y BDSM en Quito</title>
-<meta name="description" content="Clases presenciales de Shibari en Quito, Ecuador. Formación educativa en atadura japonesa con enfoque en técnica, consentimiento y seguridad.">
+<title>Piel y Cuerdas</title>
 
 <style>
 
 :root{
 --bg:#1a1714;
---card:#221e1a;
 --text:#f4f1ec;
---muted:#b6aea5;
---accent:#9b1c1c;
---border:#2f2a25;
 }
 
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
-font-family:Georgia,"Times New Roman",serif;
+box-sizing:border-box;
 }
 
 body{
-background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.45)),var(--bg);
-color:var(--text);
-line-height:1.7;
-}
-
-/* BARRA INSTITUCIONAL */
-
-.institution-bar{
-width:100%;
-background:#c49546;
-border-top:3px solid var(--accent);
-border-bottom:1px solid var(--border);
-color:#342203;
-font-size:.75rem;
-letter-spacing:.08em;
-padding:6px 14px;
+background:linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.6)), var(--bg);
 display:flex;
-justify-content:space-between;
-align-items:center;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-.institution-bar span{
-opacity:.85;
-}
-
-@media (max-width:600px){
-.institution-bar{
 flex-direction:column;
-gap:2px;
-text-align:center;
+align-items:center;
+justify-content:flex-start;
+min-height:100vh;
 }
 
-.flag-video{
-display:block;
-width:220px;
-height:220px;
-margin:0 auto 1rem auto;
-object-fit:cover;
-border-radius:8px;
-}
-  
-}
+/* VIDEO LOGO */
 
-/* HEADER */
-
-header{
-text-align:center;
-padding:2rem 1rem 1rem;
-}
-
-.logo{
-width:min(300px,70vw);
-margin:auto;
+video{
+width:min(320px, 80vw);
+margin:40px auto 30px;
 display:block;
 }
 
-.tagline{
-margin-top:.6rem;
-font-size:.9rem;
-color:var(--muted);
-letter-spacing:.08em;
-}
+/* BOTONES */
 
-/* NAVEGACIÓN */
+.nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:16px;
+max-width:500px;
+}
 
 .nav a{
-color:var(--text);
-text-decoration:none;
-padding:6px 10px;
-border-radius:6px;
-border:1px solid transparent;
-transition:all .2s ease;
-}
-
-.nav a {
-  background: none;
-  border: none;
-  padding: 0;
-  flex: 1 1 calc(45% - 10px);
-  text-align: center;
-  display: block;
-}
-
-.nav img {
-  display: block;
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.nav img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-  .nav a {
-    border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.04);
-    padding: 12px 16px; /* Aumentamos el área de clic */
-    font-size: 0.85rem;
-    flex: 1 1 calc(45% - 10px); /* Hace que los botones ocupen casi la mitad del ancho */
-    text-align: center;
-    min-width: 140px; /* Evita que se vuelvan muy flacos */
-  }
-}
-/* LAYOUT */
-
-main{
-max-width:720px;
-margin:auto;
-padding:2rem 1.5rem;
-}
-.social{
-margin-top:1rem;
-text-align:center;
-}
-
-.social a{
-display:inline-flex;
-align-items:center;
-gap:8px;
-color:#b6aea5;
-text-decoration:none;
-font-size:.9rem;
-}
-
-.social a:hover{
-color:#9b1c1c;
-}
-
-.insta{
-width:20px;
-height:20px;
-fill:currentColor;
-}
-section{
-margin-bottom:2.5rem;
-}
-
-section p{
-text-align:justify;
-hyphens:auto;
-margin-bottom:1rem;
-}
-  
-/* CARDS */
-
-.card{
-background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(0,0,0,.25)),var(--card);
-border:1px solid var(--border);
-border-radius:14px;
-padding:1.6rem;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-}
-
-h2{
-font-size:1.35rem;
-margin-bottom:.7rem;
-display:flex;
-align-items:center;
-gap:.6rem;
-}
-
-h2::before{
-content:"";
-width:10px;
-height:10px;
-border-radius:50%;
-background:var(--accent);
-}
-
-p,li{
-color:var(--muted);
-font-size:1rem;
-}
-
-ul{
-padding-left:1.2rem;
-margin-top:.7rem;
-}
-
-li{
-margin-bottom:.5rem;
-}
-
-/* NOTICE */
-
-.notice{
-border-left:3px solid var(--accent);
-background:rgba(155,28,28,.08);
-padding:1.2rem 1.4rem;
-border-radius:6px;
-font-size:.9rem;
-color:#e5ded6;
-}
-
-/* CTA */
-
-.cta{
 display:block;
-text-align:center;
-margin:2rem auto;
 }
 
-.cta-img{
-max-width:260px;
+.nav img{
 width:100%;
-transition:transform .2s,opacity .2s;
+max-width:200px;
+height:auto;
+display:block;
+transition:transform .2s ease, opacity .2s ease;
 }
 
-.cta-img:hover{
-transform:scale(1.03);
+.nav img:hover{
+transform:scale(1.05);
 opacity:.9;
 }
 
-/* FOOTER */
-
-footer{
-text-align:center;
-font-size:.85rem;
-color:#9f968c;
-padding:2rem 1rem;
-border-top:1px solid var(--border);
-}
-
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPMLMW9749"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SPMLMW9749');
-</script>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TMJHX9JH');</script>
-<!-- End Google Tag Manager -->
-  
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMJHX9JH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="institution-bar">
-<span>Piel y Cuerdas · Shibari y B.D.S.M</span>
-<span>Quito-Ecuador</span>
-<span>+18 · Formación presencial</span>
-</div>
 
-<header>
+<video autoplay loop muted playsinline>
+  <source src="HeaderFlag.webm" type="video/webm">
+</video>
+
 <nav class="nav">
+
   <a href="definicion.html">
     <img src="quees.png" alt="¿Qué es el Shibari?">
   </a>
@@ -318,79 +105,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="contacto.html">
     <img src="reservar.png" alt="Reservar Clase">
   </a>
+
 </nav>
-  
-<video class="logo" autoplay loop muted playsinline>
-  <source src="HeaderFlag.webm" type="video/webm">
-</video>
-</header>
-
-<main>
- 
-
-
-
-<img src="odalys.png" alt="Piel y Cuerdas" class="logo"> <br><br>
-
-<img src="dany.png" alt="Piel y Cuerdas" class="logo"> <br><br>
-<section id="programa">
-
-<h2>Programa de formación</h2>
-
-<ul>
-<li>Fundamentos del manejo de cuerda</li>
-<li>Seguridad y protocolos de consentimiento</li>
-<li>Estructuras básicas de atadura</li>
-<li>Comunicación entre rigger y modelo</li>
-<li>Desarrollo progresivo de técnica</li>
-</ul>
-
-</section>
-<img src="strappado.png" alt="Piel y Cuerdas" class="logo"> <br><br>
-<section class="notice">
-Este espacio tiene un enfoque educativo y artístico.
-No se ofrece contenido sexual explícito ni pornográfico.
-</section>
-
-<a href="contacto.html" class="cta">
-<img src="booknow.png" alt="Reservar clase" class="cta-img">
-</a>
-
-</main>
-
-<footer>
-
-© 2025 Piel y Cuerdas  
-<br>
-Educación en Shibari · Quito, Ecuador  
-<br>
-Programa de formación independiente
-<div class="social">
-
-<a href="https://instagram.com/pielycuerdas" target="_blank">
-
-<svg class="insta" viewBox="0 0 24 24">
-<path d="M7 2C4.24 2 2 4.24 2 7v10c0 
-2.76 2.24 5 5 5h10c2.76 0 5-2.24 
-5-5V7c0-2.76-2.24-5-5-5H7zm0 
-2h10c1.65 0 3 1.35 3 3v10c0 
-1.65-1.35 3-3 3H7c-1.65 
-0-3-1.35-3-3V7c0-1.65 
-1.35-3 3-3zm11 1.5a1.5 
-1.5 0 100 3 1.5 1.5 0 
-000-3zM12 7a5 5 0 
-100 10 5 5 0 
-000-10zm0 2a3 3 0 
-110 6 3 3 0 
-010-6z"/>
-</svg>
-
-<span>@pielycuerdas</span>
-
-</a>
-
-</div>
-</footer>
 
 </body>
 </html>
