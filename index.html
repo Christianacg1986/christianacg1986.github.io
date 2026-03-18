@@ -105,13 +105,26 @@ border:1px solid transparent;
 transition:all .2s ease;
 }
 
-.nav {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los links bajen a la siguiente línea si no caben */
-    justify-content: center;
-    gap: 12px; /* Espacio real entre los botones */
-    padding: 10px 0;
-  }
+.nav a {
+  border: none;
+  background: none;
+  padding: 0;
+  flex: 1 1 calc(45% - 10px);
+  text-align: center;
+}
+
+.nav img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform .2s, opacity .2s;
+}
+
+.nav img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
 
   .nav a {
     border: 1px solid var(--border);
