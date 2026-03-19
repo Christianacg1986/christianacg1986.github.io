@@ -52,14 +52,33 @@ color:var(--text);
 
 /* TOPBAR MEJORADA */
 .topbar{
-width:100%;
-background:linear-gradient(90deg, #ffffff, #f2f2f2);
-color:#111;
-text-align:center;
-font-size:0.75rem;
-letter-spacing:0.04em;
-padding:6px 12px;
-font-family:Arial, Helvetica, sans-serif;
+  width:100%;
+  background:linear-gradient(90deg, #ffffff, #f2f2f2);
+  color:#111;
+  overflow:hidden;
+  white-space:nowrap;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:0.8rem;
+  font-weight:600; /* MÁS BOLD */
+  letter-spacing:0.05em;
+  padding:6px 0;
+}
+
+/* TEXTO EN MOVIMIENTO */
+.scroll-text{
+  display:inline-block;
+  padding-left:100%;
+  animation:scroll 18s linear infinite;
+}
+
+/* ANIMACIÓN */
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
 }
 
 /* VIDEO */
@@ -136,7 +155,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <div class="topbar">
-Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad
+  <div class="scroll-text">
+    Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad · 
+    Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad
+  </div>
 </div>
 
 <video autoplay loop muted playsinline>
