@@ -20,7 +20,14 @@
       padding: 0;
       font-family: system-ui, -apple-system, sans-serif;
     }
-
+.logo, .Paula {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+}
     body {
       background: radial-gradient(1200px 600px at 50% 0%, #2a241c, var(--bg));
       color: var(--text);
@@ -79,20 +86,22 @@
       hyphens: auto;
     }
 
-    .nav-link {
-      display: inline-block;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      transition: 0.3s;
-      border-bottom: 1px solid transparent;
-    }
+.nav-link {
+  display: inline-block;
+  margin: 2rem auto 0;
+  padding: 10px 18px;
+  background: rgba(155, 28, 28, 0.15);
+  color: #f3f1ec;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
 
-    .nav-link:hover {
-      color: var(--wood-accent);
-      border-bottom: 1px solid var(--wood-accent);
-    }
+.nav-link:hover {
+  background: rgba(155, 28, 28, 0.35);
+  transform: translateY(-2px);
+}
   </style>
 </head>
 <body>
@@ -123,7 +132,10 @@
 
     <img src="face.jpg" alt="Piel y Cuerdas" class="Paula"> <br><br>
   </section>
+
+<main>
+  ...
+  <a href="index.html" class="nav-link">← Volver al inicio</a>
 </main>
- <a href="index.html" class="nav-link">← Volver al inicio</a>
 </body>
 </html>
