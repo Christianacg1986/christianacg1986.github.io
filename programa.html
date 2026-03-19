@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Programa Formativo | Piel y Cuerdas</title>
+<meta name="description" content="Programa formativo de Shibari en Quito Ecuador. Aprende atadura japonesa con enfoque técnico, seguridad y consentimiento.">
+
+<style>
+
+:root {
+  --bg: #1b1a17;
+  --text: #f3f1ec;
+  --muted: #b7b1a6;
+  --accent: #9b1c1c;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* FONDO */
+body {
+  background:
+  radial-gradient(circle at 20% 20%, rgba(155,28,28,0.15), transparent 40%),
+  radial-gradient(circle at 80% 80%, rgba(155,28,28,0.1), transparent 40%),
+  linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,.9)),
+  var(--bg);
+
+  color: var(--text);
+  padding: 2rem 1.25rem;
+}
+
+/* CONTENEDOR */
+main {
+  max-width: 720px;
+  margin: auto;
+}
+
+/* TÍTULO */
+h1 {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+h1::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* TEXTO */
+p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+/* IMAGEN */
+.hero {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+
+/* BLOQUES DEL PROGRAMA */
+.block {
+  margin: 2rem 0;
+}
+
+.block h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+/* LISTA */
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  display: block;
+  margin: 2.5rem auto 0;
+  text-align: center;
+}
+
+.cta img {
+  width: 100%;
+  max-width: 260px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.cta img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* VOLVER */
+.nav-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 18px;
+  background: rgba(155, 28, 28, 0.15);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(155, 28, 28, 0.35);
+  transform: translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<h1>Programa formativo</h1>
+
+<p>
+El programa de formación en Shibari está diseñado para desarrollar habilidades de manera progresiva, respetando los tiempos de aprendizaje y priorizando siempre la seguridad, la comunicación y el consentimiento.
+</p>
+
+<img src="programa.png" alt="Clases de shibari en Quito" class="hero">
+
+<!-- BLOQUE 1 -->
+<div class="block">
+<h2>Fundamentos</h2>
+<ul>
+  <li>Introducción al uso de la cuerda</li>
+  <li>Tipos de cuerda y mantenimiento</li>
+  <li>Nudos básicos y control de tensión</li>
+  <li>Postura y ergonomía</li>
+</ul>
+</div>
+
+<!-- BLOQUE 2 -->
+<div class="block">
+<h2>Seguridad y comunicación</h2>
+<ul>
+  <li>Principios de consentimiento informado</li>
+  <li>Lectura corporal y señales de riesgo</li>
+  <li>Comunicación entre rigger y modelo</li>
+  <li>Protocolos básicos de seguridad</li>
+</ul>
+</div>
+
+<!-- BLOQUE 3 -->
+<div class="block">
+<h2>Estructuras básicas</h2>
+<ul>
+  <li>Ataduras de torso</li>
+  <li>Ataduras de brazos y piernas</li>
+  <li>Transiciones entre posiciones</li>
+  <li>Control del ritmo y la tensión</li>
+</ul>
+</div>
+
+<!-- BLOQUE 4 -->
+<div class="block">
+<h2>Desarrollo progresivo</h2>
+<ul>
+  <li>Integración técnica y fluidez</li>
+  <li>Construcción de secuencias</li>
+  <li>Exploración estética y expresiva</li>
+  <li>Práctica supervisada</li>
+</ul>
+</div>
+
+<!-- CTA -->
+<a href="contacto.html" class="cta">
+  <img src="booknow.png" alt="Reservar clase de shibari en Quito">
+</a>
+
+<!-- VOLVER -->
+<a href="index.html" class="nav-link">← Volver al inicio</a>
+
+</main>
+
+</body>
+</html>
