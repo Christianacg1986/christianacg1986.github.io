@@ -3,7 +3,138 @@
 <h2>Enfoque educativo</h2>
 <img src="taller.png" alt="Piel y Cuerdas" class="logo">
 <p>
-La enseñanza se basa en el desarrollo progresivo de habilidades técnicas,
+La enseñanza se basa en el desarrollo pr<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enfoque educativo | Piel y Cuerdas</title>
+
+<style>
+
+:root {
+  --bg: #1b1a17;
+  --card: #24211c;
+  --text: #f3f1ec;
+  --muted: #b7b1a6;
+  --accent: #9b1c1c;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* FONDO */
+body {
+  background:
+  radial-gradient(circle at 20% 20%, rgba(155,28,28,0.15), transparent 40%),
+  radial-gradient(circle at 80% 80%, rgba(155,28,28,0.1), transparent 40%),
+  linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,.9)),
+  var(--bg);
+
+  color: var(--text);
+  padding: 2rem 1.25rem;
+}
+
+/* CONTENEDOR */
+main {
+  max-width: 720px;
+  margin: auto;
+}
+
+/* TARJETA (MUY SUTIL) */
+.card {
+  padding: 2rem 0;
+}
+
+/* TÍTULO */
+h2 {
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+h2::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* TEXTO */
+p {
+  color: var(--muted);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* IMÁGENES RESPONSIVAS */
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* BOTÓN VOLVER */
+.nav-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 18px;
+  background: rgba(155, 28, 28, 0.15);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(155, 28, 28, 0.35);
+  transform: translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<section id="enfoque" class="card">
+
+<h2>Enfoque educativo</h2>
+
+<img src="taller.png" alt="Taller de shibari en Quito" class="logo">
+
+<p>
+La enseñanza se basa en el desarrollo progresivo de habilidades técnicas, con especial atención en la seguridad, el consentimiento informado y la comunicación entre quienes practican.
+</p>
+
+<a href="index.html" class="nav-link">← Volver al inicio</a>
+
+</section>
+
+</main>
+
+</body>
+</html>ogresivo de habilidades técnicas,
 con especial atención en la seguridad, el consentimiento informado y
 la comunicación entre quienes practican.
 </p>
