@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiénes Somos | Piel y Cuerdas</title>
+
   <style>
     :root {
       --bg: #1b1a17;
@@ -20,14 +21,7 @@
       padding: 0;
       font-family: system-ui, -apple-system, sans-serif;
     }
-.logo, .Paula {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem auto;
-  border-radius: 10px;
-}
+
     body {
       background: radial-gradient(1200px 600px at 50% 0%, #2a241c, var(--bg));
       color: var(--text);
@@ -40,24 +34,29 @@
       margin: auto;
     }
 
-    /* Estilos de la Tarjeta */
+    /* TARJETA */
     .card {
       background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent), var(--card);
       border: 1px solid var(--border);
-      border-radius: 2px;
+      border-radius: 8px;
       padding: 2.25rem;
-      position: relative;
-      overflow: hidden;
       margin-top: 2rem;
     }
 
-    /* Estilo del Video / Logo */
-    .logo {
-      display: block;
+    /* MEDIA RESPONSIVA */
+    img, video {
       width: 100%;
-      max-width: 400px; /* Ajusta este tamaño según prefieras el logo */
-      margin: 0 auto 2rem auto;
-      border-radius: 12px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.8rem auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* CONTROL DEL VIDEO */
+    video.logo {
+      max-width: 420px;
       opacity: 0.9;
       filter: grayscale(0.2) contrast(1.1);
     }
@@ -86,30 +85,43 @@
       hyphens: auto;
     }
 
-.nav-link {
-  display: inline-block;
-  margin: 2rem auto 0;
-  padding: 10px 18px;
-  background: rgba(155, 28, 28, 0.15);
-  color: #f3f1ec;
-  text-decoration: none;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  transition: all 0.25s ease;
-}
+    /* BOTÓN VOLVER */
+    .nav-link {
+      display: inline-block;
+      margin: 2.5rem auto 0;
+      padding: 12px 20px;
+      background: rgba(155, 28, 28, 0.2);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+    }
 
-.nav-link:hover {
-  background: rgba(155, 28, 28, 0.35);
-  transform: translateY(-2px);
-}
+    .nav-link:hover {
+      background: rgba(155, 28, 28, 0.4);
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 3rem 2rem;
+      }
+
+      .card {
+        padding: 2.5rem;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
 <main>
- 
 
   <section id="quienes" class="card">
+
     <video class="logo" autoplay loop muted playsinline>
       <source src="lowflag.webm" type="video/webm">
       Tu navegador no soporta videos.
@@ -125,12 +137,14 @@
     <p>
       El proyecto busca ofrecer un entorno que desafíe las nociones preconcebidas de los participantes y en el que estos puedan aprender progresivamente las bases del manejo de cuerda, la comunicación y los principios de interacción psicológica de <strong>Dominación/sumisión</strong> que forman parte de esta disciplina.
     </p>
-<img src="naomi.png" alt="Piel y Cuerdas" class="logo"> 
+
+    <img src="naomi.png" alt="Shibari Piel y Cuerdas">
+
     <p>
       Al mismo tiempo, reconocemos el origen y la naturaleza sadomasoquista del Shibari moderno, y no diluimos ni ocultamos ese elemento para adaptarlo a sensibilidades del público general. Nuestro enfoque consiste en abordar la práctica con claridad, rigor técnico y responsabilidad.
     </p>
 
-        <p>
+    <p>
       En <strong>Piel y Cuerdas</strong> abordamos el Shibari desde una línea que prioriza
       la <strong>intención</strong>, la <strong>tensión</strong> y el
       <strong>control consciente</strong>, entendiendo la cuerda como una herramienta de
@@ -143,12 +157,14 @@
       siempre dentro de un marco de <strong>consentimiento informado</strong> y
       <strong>seguridad</strong>.
     </p>
-    <img src="arms.jpg" alt="Strappado Paula">
+
+    <img src="arms.jpg" alt="Strappado Shibari">
+
   </section>
 
-<main>
-  ...
   <a href="index.html" class="nav-link">← Volver al inicio</a>
+
 </main>
+
 </body>
 </html>
