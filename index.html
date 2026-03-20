@@ -26,6 +26,8 @@ f.parentNode.insertBefore(j,f);
 --bg:#1a1714;
 --text:#f4f1ec;
 --accent:#9b1c1c;
+--btn-bg: rgba(255,255,255,0.08);
+--btn-bg-hover: rgba(155,28,28,0.2);
 }
 
 /* RESET */
@@ -73,12 +75,8 @@ color:var(--text);
 
 /* ANIMACIÓN */
 @keyframes scroll{
-  0%{
-    transform:translateX(0);
-  }
-  100%{
-    transform:translateX(-100%);
-  }
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-100%); }
 }
 
 /* VIDEO */
@@ -88,25 +86,37 @@ margin:40px auto 30px;
 display:block;
 }
 
-/* BOTONES */
-.nav{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:8px;
-max-width:500px;
+/* NAV CON RECUADRO */
+.nav-container{
+  background: var(--btn-bg);
+  padding: 12px;
+  border-radius: 12px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  max-width:520px;
+  margin-bottom:40px;
 }
 
 .nav img{
 width:100%;
 max-width:200px;
 display:block;
-transition:transform .2s ease, opacity .2s ease;
+transition: transform .2s ease, opacity .2s ease;
+border-radius:8px;
 }
 
 .nav img:hover{
 transform:scale(1.05);
 opacity:.9;
+}
+
+/* AJUSTE EN CELULAR */
+@media(max-width:600px){
+  .nav img{
+    max-width:80%;
+  }
 }
 
 /* FOOTER */
@@ -165,25 +175,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <source src="animatedlogo.webm.webm" type="video/webm">
 </video>
 
-<nav class="nav">
-
-  <a href="definicion.html"><img src="quees.png"></a>
-  <a href="quienes.html"><img src="quienes.png"></a>
-  <a href="fundador.html"><img src="fundador.png"></a>
-  <a href="enfoque.html"><img src="enfoque.png"></a>
-  <a href="porqueatar.html"><img src="atarpareja.png"></a>
-  <a href="galeria.html"><img src="galeria.png"></a>
-  <a href="contacto.html"><img src="booknow.png"></a>
-
-</nav>
+<!-- RECUADRO BOTONES -->
+<div class="nav-container">
+  <nav class="nav">
+    <a href="definicion.html"><img src="quees.png"></a>
+    <a href="quienes.html"><img src="quienes.png"></a>
+    <a href="fundador.html"><img src="fundador.png"></a>
+    <a href="enfoque.html"><img src="enfoque.png"></a>
+    <a href="porqueatar.html"><img src="atarpareja.png"></a>
+    <a href="galeria.html"><img src="galeria.png"></a>
+    <a href="contacto.html"><img src="booknow.png"></a>
+  </nav>
+</div>
 
 <footer class="footer">
-
   <p>© 2025 Piel y Cuerdas</p>
   <p>Quito · Ecuador · Formación presencial</p>
 
   <a href="https://instagram.com/pielycuerdas" target="_blank" class="insta-link">
-    
     <svg viewBox="0 0 24 24" class="insta-icon">
       <path d="M7 2C4.24 2 2 4.24 2 7v10c0 
       2.76 2.24 5 5 5h10c2.76 0 5-2.24 
@@ -199,11 +208,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       110 6 3 3 0 
       010-6z"/>
     </svg>
-
     @pielycuerdas
-
   </a>
-
 </footer>
 
 </body>
