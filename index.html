@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TMJHX9JH');
+</script>
+<!-- End Google Tag Manager -->
+
+<link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Piel y Cuerdas</title>
 
 <style>
@@ -14,19 +28,26 @@
 --btn-bg-hover: rgba(155,28,28,0.2);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* FONDO */
 body{
-  background:
-    radial-gradient(circle at 20% 30%, rgba(155,28,28,0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(155,28,28,0.1), transparent 40%),
-    linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.85)),
-    var(--bg);
-  color:var(--text);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-height:100vh;
-  font-family:Arial, Helvetica, sans-serif;
+background:
+radial-gradient(circle at 20% 30%, rgba(155,28,28,0.15), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(155,28,28,0.1), transparent 40%),
+linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.85)),
+var(--bg);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+min-height:100vh;
+color:var(--text);
 }
 
 /* TOPBAR */
@@ -36,16 +57,20 @@ body{
   color:#111;
   overflow:hidden;
   white-space:nowrap;
+  font-family:Arial, Helvetica, sans-serif;
   font-size:0.8rem;
   font-weight:600;
   letter-spacing:0.05em;
   padding:6px 0;
 }
+
+/* TEXTO EN MOVIMIENTO */
 .scroll-text{
   display:inline-block;
   padding-left:100%;
   animation:scroll 18s linear infinite;
 }
+
 @keyframes scroll{
   0%{ transform:translateX(0); }
   100%{ transform:translateX(-100%); }
@@ -53,39 +78,44 @@ body{
 
 /* VIDEO */
 video{
-  width:min(320px,80vw);
-  margin:40px auto 30px;
-  display:block;
+width:min(320px, 80vw);
+margin:40px auto 30px;
+display:block;
 }
 
-/* NAV HORIZONTAL CON INERCIA */
+/* NAV CON RECUADRO */
 .nav-container{
   background: var(--btn-bg);
   padding: 12px;
   border-radius: 12px;
   display:flex;
-  overflow-x: auto;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:12px;
-  scroll-behavior: smooth; /* scroll fluido al usar JS */
-  -webkit-overflow-scrolling: touch; /* inercia en iOS */
-  max-width:90%;
+  max-width:520px;
+  margin-bottom:40px;
 }
 
-/* BOTONES */
-.nav{
-  display:flex;
-  gap:12px;
-}
 .nav img{
-  width:160px;
-  max-width:100%;
-  border-radius:8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor:pointer;
+width:100%;
+max-width:200px;
+display:block;
+transition: transform .2s ease, opacity .2s ease;
+border-radius:8px;
 }
+
 .nav img:hover{
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+transform:scale(1.05);
+opacity:.9;
+}
+
+/* AJUSTE EN CELULAR */
+@media(max-width:600px){
+  .nav img{
+    max-width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
 
 /* FOOTER */
@@ -99,6 +129,7 @@ flex-direction:column;
 gap:6px;
 padding-bottom:20px;
 }
+
 .insta-link{
 margin-top:10px;
 display:inline-flex;
@@ -108,30 +139,33 @@ color:#b6aea5;
 text-decoration:none;
 transition:color .2s ease, transform .2s ease;
 }
+
 .insta-link:hover{
 color:var(--accent);
 transform:scale(1.05);
 }
+
 .insta-icon{
 width:18px;
 height:18px;
 fill:currentColor;
 }
-
-/* CENTRADO EN CELULAR */
-@media(max-width:600px){
-  .nav-container{
-    max-width:80%;
-    margin:auto;
-  }
-}
 </style>
+
 </head>
+
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMJHX9JH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
 <div class="topbar">
   <div class="scroll-text">
-    Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad ·
+    Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad · 
+    Clases de Shibari en Quito Ecuador · Cursos de BDSM seguro · Talleres de atadura japonesa · Formación presencial con enfoque en consentimiento y seguridad
   </div>
 </div>
 
@@ -139,6 +173,7 @@ fill:currentColor;
   <source src="animatedlogo.webm.webm" type="video/webm">
 </video>
 
+<!-- RECUADRO BOTONES -->
 <div class="nav-container">
   <nav class="nav">
     <a href="definicion.html"><img src="quees.png"></a>
@@ -154,25 +189,26 @@ fill:currentColor;
 <footer class="footer">
   <p>© 2025 Piel y Cuerdas</p>
   <p>Quito · Ecuador · Formación presencial</p>
+
   <a href="https://instagram.com/pielycuerdas" target="_blank" class="insta-link">
     <svg viewBox="0 0 24 24" class="insta-icon">
-      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 
+      2.76 2.24 5 5 5h10c2.76 0 5-2.24 
+      5-5V7c0-2.76-2.24-5-5-5H7zm0 
+      2h10c1.65 0 3 1.35 3 3v10c0 
+      1.65-1.35 3-3 3H7c-1.65 
+      0-3-1.35-3-3V7c0-1.65 
+      1.35-3 3-3zm11 1.5a1.5 
+      1.5 0 100 3 1.5 1.5 0 
+      000-3zM12 7a5 5 0 
+      100 10 5 5 0 
+      000-10zm0 2a3 3 0 
+      110 6 3 3 0 
+      010-6z"/>
     </svg>
     @pielycuerdas
   </a>
 </footer>
-
-<script>
-// efecto reactivo al scroll
-const navContainer = document.querySelector('.nav-container');
-navContainer.addEventListener('scroll', e => {
-  const scrollLeft = navContainer.scrollLeft;
-  const imgs = navContainer.querySelectorAll('img');
-  imgs.forEach((img,index)=>{
-    img.style.transform = `translateX(${scrollLeft*0.02*index}px)`; // ligero movimiento parallax
-  });
-});
-</script>
 
 </body>
 </html>
