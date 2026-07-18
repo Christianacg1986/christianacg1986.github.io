@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- Contenedor del video -->
+    <div id="player"></div>
+    
+    <!-- Botón de inicio -->
+    <button id="playButton">Reproducir Canción</button>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player;
+        const botToken = "TU_TOKEN_AQUI";
+        const chatId = "TU_CHAT_ID_AQUI";
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: 'dhs1_PVAy8k' // ID de tu video
+            });
+        }
+
+        document.getElementById('playButton').addEventListener('click', function() {
+            // Inicia el video
+            player.playVideo();
+            
+            // Envía la notificación
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=¡Alguien hizo clic en Reproducir!`);
+            
+            // Opcional: Ocultar botón tras el clic
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
