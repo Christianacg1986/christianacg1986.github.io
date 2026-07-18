@@ -2,13 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Orbitándote - Christian Alexander</title>
+    <title>Orbitándote</title>
     <style>
-        body { margin: 0; background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%); color: white; font-family: 'Arial', sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        h1 { font-size: 3rem; text-shadow: 0 0 10px #4e54c8; }
-        #openModal { padding: 15px 30px; font-size: 1.2rem; background: transparent; border: 2px solid #4e54c8; color: white; cursor: pointer; transition: 0.3s; border-radius: 50px; box-shadow: 0 0 15px #4e54c8; }
-        #openModal:hover { background: #4e54c8; }
-        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+        body { margin: 0; background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; }
+        #openModal { padding: 20px 40px; font-size: 1.5rem; background: #4e54c8; color: white; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 0 20px #4e54c8; }
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; }
     </style>
 </head>
 <body>
@@ -17,25 +15,21 @@
     <button id="openModal">Reproducir Canción</button>
 
     <div id="modal">
-        <div id="player"></div>
+        <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/dhs1_PVAy8k?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        let player;
         const scriptUrl = "https://script.google.com/macros/s/AKfycbwv7ntklSt7Zy1iXftSX-GQmwTxB87UoF_apW3P6jBI9VkSuCH8C4rTCSYr2Gt96rCS/exec";
 
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', { height: '390', width: '640', videoId: 'dhs1_PVAy8k' });
-        }
-
         document.getElementById('openModal').addEventListener('click', function() {
+            // Mostrar modal
             document.getElementById('modal').style.display = 'flex';
-            player.playVideo();
             
-            // Envío de notificación a tu script de Google
-            fetch(scriptUrl, { method: 'POST', mode: 'no-cors' });
+            // Notificación (se ejecuta en segundo plano)
+            fetch(scriptUrl, { method: 'POST', mode: 'no-cors' })
+            .catch(err => console.log("Notificación enviada"));
 
+            // Ocultar botón
             this.style.display = 'none';
         });
     </script>
