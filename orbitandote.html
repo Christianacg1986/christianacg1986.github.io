@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Orbitándote - Christian Alexander</title>
     <style>
-        /* Estilo del modal (pop-up) */
-        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-        #player { background: #000; }
+        body { margin: 0; background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%); color: white; font-family: 'Arial', sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        h1 { font-size: 3rem; text-shadow: 0 0 10px #4e54c8; }
+        #openModal { padding: 15px 30px; font-size: 1.2rem; background: transparent; border: 2px solid #4e54c8; color: white; cursor: pointer; transition: 0.3s; border-radius: 50px; box-shadow: 0 0 15px #4e54c8; }
+        #openModal:hover { background: #4e54c8; }
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
 
+    <h1>Orbitándote</h1>
     <button id="openModal">Reproducir Canción</button>
 
     <div id="modal">
@@ -18,24 +23,20 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         let player;
-        const botToken = "TU_TOKEN_AQUI";
-        const chatId = "TU_CHAT_ID_AQUI";
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbwv7ntklSt7Zy1iXftSX-GQmwTxB87UoF_apW3P6jBI9VkSuCH8C4rTCSYr2Gt96rCS/exec";
 
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '390', width: '640', videoId: 'dhs1_PVAy8k'
-            });
+            player = new YT.Player('player', { height: '390', width: '640', videoId: 'dhs1_PVAy8k' });
         }
 
         document.getElementById('openModal').addEventListener('click', function() {
-            // Muestra el modal
             document.getElementById('modal').style.display = 'flex';
-            
-            // Inicia el video
             player.playVideo();
             
-            // Envía la notificación a Telegram
-            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=¡Alguien abrió el pop-up de Orbitándote!`);
+            // Envío de notificación a tu script de Google
+            fetch(scriptUrl, { method: 'POST', mode: 'no-cors' });
+
+            this.style.display = 'none';
         });
     </script>
 </body>
